@@ -1,53 +1,90 @@
-# Web Development Course
+# CSS Box Model
 
-Welcome to the Web Development Course repository! This repository serves as a comprehensive resource for learning and understanding HTML, CSS, and JavaScript. Whether you're a beginner or looking to sharpen your skills, you'll find detailed notes and resources here.
+All HTML elements can be considered as boxes.
 
-## Table of Contents
+In CSS, the term "box model" is used when talking about design and layout.
 
-- [Overview](#overview)
-- [Getting Started](#getting-started)
-- [Course Structure](#course-structure)
-- [Topics Covered](#topics-covered)
-- [Contributing](#contributing)
+The CSS box model is essentially a box that wraps around every HTML element. It consists of: content, padding, borders and margins. The image below illustrates the box model:
 
-## Overview
+![CSS Box Image](./box_model.png)
 
-This course is designed to provide a solid foundation in web development, focusing on HTML for structuring content, CSS for styling, and JavaScript for interactivity. Whether you're a complete beginner or looking to reinforce your knowledge, these notes will guide you through the essentials.
+Explanation of the different parts:
 
-## Getting Started
+- Content - The content of the box, where text and images appear
+- Padding - Clears an area around the content. The padding is transparent
+- Border - A border that goes around the padding and content
+- Margin - Clears an area outside the border. The margin is transparent
 
-To get started with the course, make sure you have a text editor installed (such as Visual Studio Code) and a web browser. Follow the instructions in the [Youtube Playlist](https://www.youtube.com/playlist?list=PLdVeTHIYtl-U0-b_IB8ddbePRW1kM33_K) guide to set up your development environment.
+**The box model allows us to add a border around elements, and to define space between elements.**
 
-## Course Structure
+## Width and Height of an Element
 
-The course is divided into three main sections:
+In order to set the width and height of an element correctly in all browsers, you need to know how the box model works.
 
-1. **HTML:** Learn the fundamentals of HTML for structuring web content.
-2. **CSS:** Explore the world of CSS for styling your web pages.
-3. **JavaScript:** Dive into JavaScript for adding interactivity and dynamic behavior.
+**Important: When you set the width and height properties of an element with CSS, you just set the width and height of the content area. To calculate the total width and height of an element, you must also include the padding and borders.**
 
-## Topics Covered
+## CSS Padding
 
-- **HTML:**
+Padding is used to create space around an element's content, inside of any defined borders.
 
-  - Document Structure
-  - Elements and Tags
-  - Forms and Input
-  - Multimedia Integration
+With CSS, you have full control over the padding. There are properties for setting the padding for each side of an element (top, right, bottom, and left).
 
-- **CSS:**
+CSS has properties for specifying the padding for each side of an element:
 
-  - Selectors and Styling Rules
-  - Layouts and Flexbox
-  - Responsive Design
-  - Transitions and Animations
+- padding-top
+- padding-right
+- padding-bottom
+- padding-left
 
-- **JavaScript:**
-  - Variables and Data Types
-  - Functions and Control Flow
-  - DOM Manipulation
-  - AJAX and Asynchronous Programming
+  All the padding properties can have the following values:
 
-## Contributing
+- length - specifies a padding in px, pt, cm, etc.
+- % - specifies a padding in % of the width of the containing element
+- inherit - specifies that the padding should be inherited from the parent element
 
-If you find errors, have suggestions, or want to contribute additional content, please open an issue or submit a pull request. Your input is highly valued!
+  **Note: Negative values are not allowed.**
+
+To shorten the code, it is possible to specify all the padding properties in one property.
+
+The padding property is a shorthand property for the following individual padding properties:
+
+**padding shorthand property with two values**
+
+```
+padding: top and bottom px  right and left px
+```
+
+**padding shorthand property with three values**
+
+```
+padding: padding-top padding-right padding-bottom
+```
+
+**padding shorthand property with four values**
+
+```
+padding: padding-top padding-right padding-bottom padding-left
+
+```
+
+## CSS Margins
+
+Margins are used to create space around elements, outside of any defined borders.
+
+**Refer to padding**
+
+**Tip: Negative values are allowed.**
+
+### The auto Value
+
+You can set the margin property to auto to horizontally center the element within its container.
+
+The element will then take up the specified width, and the remaining space will be split equally between the left and right margins.
+
+**Tip: Try to center a div using `margin: 0 auto`**
+
+### Margin Collapse
+
+Top and bottom margins of elements are sometimes collapsed into a single margin that is equal to the largest of the two margins.
+
+This does not happen on left and right margins! Only top and bottom margins!
