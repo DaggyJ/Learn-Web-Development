@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <form action="./index.php" method="get">
+        <!--get & post
+        Get method: appends the data to url. get is not safe to sent data
+        Get method: has a limitation on the url
+        Post methods: the data is not append to the url, it is appended to the http request.-->
+    <label>Name</label><input type="Name"/>
+    <label>Email</label><input type="Email"/>
+    
+
+<!--Select Elements-->
+<label>Choose your favourite language</label>
+<section>
+    <option value="html" name="option1">HTML</option>
+    <option selected value="css" name="option2">CSS</option>
+    <option value="js" name="option3">JS</option>
+</section><br/>
+
+
+<!--Text area element-->
+<label>Any additional comment</label>
+<textarea placeholder="Enter your message"></textarea>
+<textarea placeholder="Enter your message" rows="8" cols="8"></textarea><br/>
+
+<!--Fieldset Element-->
+<fieldset>
+    <legend>Personal information</legend>
+    <label>Name</label><input type="Name"/>
+    <label>Email</label><input type="Email"/>
+    
+</fieldset>
+<fieldset>
+    <Legend>Additinal information</Legend>
+    <label>Choose your favourite language</label>
+    <section>
+        <option value="html" name="option1">HTML</option>
+        <option selected value="css" name="option2">CSS</option>
+        <option value="js" name="option3">JS</option>
+    </section><br/>
+    
+    
+    <!--Text area element-->
+    <label>Any additional comment</label>
+    <textarea placeholder="Enter your message"></textarea></fieldset><br/>
+    <textarea placeholder="Enter your message" rows="8" cols="8"></textarea><br/>
+    
+</fieldset><br/>
+
+<!--Datalist Element-->
+<label>What is your fav browsers</label>
+<input list="browsers">
+<datalist id="browsers">
+    <option value="Firefox" ></option>
+    <option value="Chrome" ></option>
+    <option value="opera" ></option>
+    <option value="Safari" ></option>
+    <option value="Edge" ></option>
+</datalist>
+
+    <input type="submit">
+    <button>sign up</button>
+
+</form>
+  </body>
+</html>
