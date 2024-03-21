@@ -1,0 +1,20 @@
+.first {
+font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.second {
+font-family: 'Times New Roman', Times, serif;
+}
+
+.third {
+    font-family: monospace;
+}
+
+.forth {
+    font-family: fantasy;
+}
+
+.fifth {
+    font-family: cursive;
+}
